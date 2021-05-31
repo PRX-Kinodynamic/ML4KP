@@ -1,4 +1,4 @@
-# ML4KP
+# ML4KP ([website](https://sites.google.com/scarletmail.rutgers.edu/ml4kp/))
 
 A library for integrating machine learning tools with state-of-the-art sampling-based kinodynamic planning algorithms.
 
@@ -116,3 +116,7 @@ python3.9 ${DIRTMP_PATH}/examples/acrobot/rrt.py
 python3.9 ${DIRTMP_PATH}/examples/acrobot/sst.py
 python3.9 ${DIRTMP_PATH}/examples/acrobot/dirt.py
 ```
+
+## Issues / Bugs / Feature Requests
+
+Please create an issue on GitHub. Be as descriptive as possible and provide a minimal working example that reproduces the issue if you can.
