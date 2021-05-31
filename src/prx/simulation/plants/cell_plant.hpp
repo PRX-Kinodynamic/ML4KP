@@ -13,7 +13,7 @@ namespace prx
 		virtual void propagate(const double simulation_step) override final;
 
 		virtual void update_configuration() override;
-		virtual void set_geo(double, double) override;
+		void set_geo(double, double);
 	protected:
 
 		virtual void compute_derivative() override final;
