@@ -23,7 +23,7 @@ cmake .. && make -j4 && make install
 
 ### _(Optional)_ LibTorch
 1. Download and extract the stable build of LibTorch (CPU) to `src/prx/external`. 
-2. Add the location to `$TorchDIR`.
+2. Add the location to `$Torch_DIR`.
 
 
 ## SETUP
