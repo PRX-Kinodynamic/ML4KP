@@ -1,0 +1,16 @@
+name: "rally_car"
+path: "rally_car"
+
+# Assume simple_obstacle environment
+start_state: [ 0.0,  0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+goal_state:  [20.0, 20.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+min_steps: 1
+max_steps: 50
+
+# state_space_lower_bound: [-10,-10,-3.14159, -90, -90, -1, 0, 0]
+# state_space_upper_bound: [ 30, 30, 3.14159,  90,  90,  1,  400,  400]
+state_space_lower_bound: [-100,-100,-5, -5, -3.14, -0.1, -10, -10]
+state_space_upper_bound: [ 300, 300, 5, 5, 3.14, 0.1, 10, 10]
+
+vis_body: "body"

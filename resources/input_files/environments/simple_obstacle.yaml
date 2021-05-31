@@ -1,0 +1,15 @@
+environment:
+    type: obstacle
+    root_configuration:
+      position: [0,0,0]
+      orientation: [0,0,0,1]
+    geometries:
+      -
+        name: simple_obstacle
+        collision_geometry:
+          type: box
+          dims: [ 3, 3, 2]
+          material: 0x0015ff
+        config:
+          position: [10, 10, 1]
+          orientation: [0,0,0,1]

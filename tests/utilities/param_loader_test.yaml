@@ -1,0 +1,9 @@
+str_test: dirtmp
+
+int_test: 231192
+
+dbl_test: 3.1415926535897932385
+
+bool_test: true
+
+vec_test: [0, 1, 2, 3, 4]

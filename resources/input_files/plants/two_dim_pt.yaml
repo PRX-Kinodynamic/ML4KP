@@ -1,0 +1,15 @@
+name: "2D_Point"
+path: "2D_Point"
+
+# Assume simple_obstacle environment
+start_state: [0.0, 0.0]
+goal_state:  [20.0, 20.0]
+
+min_steps: 1
+max_steps: 50
+
+state_space_lower_bound: [-10, -10]
+state_space_upper_bound: [30, 30]
+
+
+vis_body: "body"

@@ -1,0 +1,14 @@
+name: "Ackermann_FO"
+path: "Ackermann_FO"
+
+# Assume simple_obstacle environment
+start_state: [0.0, 0.0, 0.0]
+goal_state:  [9.5, 9.5, 0.0]
+
+min_steps: 1
+max_steps: 25
+
+state_space_lower_bound: [-10,-10,-3.14159]
+state_space_upper_bound: [11,11,3.14159]
+
+vis_body: "body"

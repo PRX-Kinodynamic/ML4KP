@@ -1,0 +1,87 @@
+environment:
+    type: obstacle
+    root_configuration:
+      position: [0,0,0]
+      orientation: [0,0,0,1]
+    geometries:
+      -
+        name: base
+        collision_geometry:
+          type: box
+          dims: [ .1, 5, 1]
+          material: 0x0015ff
+        config:
+          position: [-1, 0, 0]
+          orientation: [0,0,0,1]
+      -
+        name: left_wall
+        collision_geometry:
+          type: box
+          dims: [ 5, .1, 1]
+          material: 0x0015ff
+        config:
+          position: [1.5, 2.5, 0]
+          orientation: [0,0,0,1]
+      -
+        name: right_wall
+        collision_geometry:
+          type: box
+          dims: [ 5, .1, 1]
+          material: 0x0015ff
+        config:
+          position: [1.5, -2.5, 0]
+          orientation: [0,0,0,1]
+      -	  
+        name: front_left
+        collision_geometry:
+          type: box
+          dims: [ .1, 1.5, 1]
+          material: 0x0015ff
+        config:
+          position: [4, 1.75, 0]
+          orientation: [0,0,0,1]
+      -
+        name: front_right
+        collision_geometry:
+          type: box
+          dims: [ .1, 1.5, 1]
+          material: 0x0015ff
+        config:
+          position: [4, -1.75, 0]
+          orientation: [0,0,0,1]
+      -
+        name: bb_right
+        collision_geometry:
+          type: box
+          dims: [ .1, 14, 1]
+          material: 0x0015ff
+        config:
+          position: [8, 0, 0]
+          orientation: [0,0,0,1]
+      -
+        name: bb_left
+        collision_geometry:
+          type: box
+          dims: [ .1, 14, 1]
+          material: 0x0015ff
+        config:
+          position: [-10, 0, 0]
+          orientation: [0,0,0,1]
+      -
+        name: bb_top
+        collision_geometry:
+          type: box
+          dims: [ 18, .1, 1]
+          material: 0x0015ff
+        config:
+          position: [-1, 7, 0]
+          orientation: [0,0,0,1]
+      -
+        name: bb_down
+        collision_geometry:
+          type: box
+          dims: [ 18, .1, 1]
+          material: 0x0015ff
+        config:
+          position: [-1, -7, 0]
+          orientation: [0,0,0,1]

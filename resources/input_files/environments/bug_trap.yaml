@@ -1,0 +1,105 @@
+environment:
+    type: obstacle
+    root_configuration:
+      position: [0,0,0]
+      orientation: [0,0,0,1]
+    geometries:
+      -
+        name: border_top
+        collision_geometry:
+          type: box
+          dims: [ 34, 2, 1]
+          material: 0x0015ff
+        config:
+          position: [-2, 17, 0]
+          orientation: [0,0,0,1]
+      -
+        name: border_right
+        collision_geometry:
+          type: box
+          dims: [ 2, 32, 1]
+          material: 0x0015ff
+        config:
+          position: [14, 0, 0]
+          orientation: [0,0,0,1]
+      -
+        name: border_bottom
+        collision_geometry:
+          type: box
+          dims: [ 34, 2, 1]
+          material: 0x0015ff
+        config:
+          position: [-2, -17, 0]
+          orientation: [0,0,0,1]
+      -
+        name: border_left
+        collision_geometry:
+          type: box
+          dims: [ 2, 32, 1]
+          material: 0x0015ff
+        config:
+          position: [-18, 0, 0]
+          orientation: [0,0,0,1]
+      -
+        name: trap_top
+        collision_geometry:
+          type: box
+          dims: [ 14, 2, 1]
+          material: 0x0015ff
+        config:
+          position: [-1, 7, 0]
+          orientation: [0,0,0,1]
+      -
+        name: trap_left
+        collision_geometry:
+          type: box
+          dims: [ 2, 12, 1]
+          material: 0x0015ff
+        config:
+          position: [-7, 0, 0]
+          orientation: [0,0,0,1]
+      -
+        name: trap_bottom
+        collision_geometry:
+          type: box
+          dims: [ 14, 2, 1]
+          material: 0x0015ff
+        config:
+          position: [-1, -7, 0]
+          orientation: [0,0,0,1]
+      -
+        name: trap_right_top
+        collision_geometry:
+          type: box
+          dims: [ 2, 3, 1]
+          material: 0x0015ff
+        config:
+          position: [5, 4.5, 0]
+          orientation: [0,0,0,1]
+      -
+        name: trap_right_bottom
+        collision_geometry:
+          type: box
+          dims: [ 2, 3, 1]
+          material: 0x0015ff
+        config:
+          position: [5, -4.5, 0]
+          orientation: [0,0,0,1]
+      -
+        name: trap_inner_top
+        collision_geometry:
+          type: box
+          dims: [ 6, 2, 1]
+          material: 0x0015ff
+        config:
+          position: [3, 2, 0]
+          orientation: [0,0,0,1]
+      -
+        name: trap_inner_bottom
+        collision_geometry:
+          type: box
+          dims: [ 6, 2, 1]
+          material: 0x0015ff
+        config:
+          position: [3, -2, 0]
+          orientation: [0,0,0,1]

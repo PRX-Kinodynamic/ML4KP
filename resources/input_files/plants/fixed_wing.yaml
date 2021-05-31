@@ -1,0 +1,14 @@
+name: "fixed_wing"
+path: "fixed_wing"
+
+# Assume simple_obstacle environment
+start_state: [-6, -3, 4.1, 8.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+goal_state:  [ 6, -3, 5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+min_steps: 1
+max_steps: 10
+
+state_space_lower_bound: [-9, -6.5, 1.07,  1, -1.0 , -3.14, -.8, -.8, 0.0]
+state_space_upper_bound: [ 9,  6.5, 15  ,  8,  1.0 ,  3.14,  .8,  .8, 8.0]
+
+vis_body: "body"

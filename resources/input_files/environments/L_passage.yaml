@@ -1,0 +1,78 @@
+environment:
+    type: obstacle
+    root_configuration:
+      position: [0,0,0]
+      orientation: [0,0,0,1]
+    geometries:
+      -
+        name: passage_left
+        collision_geometry:
+          type: box
+          dims: [ .1, 10, 1]
+          material: 0x0015ff
+        config:
+          position: [2, -3, 0]
+          orientation: [0,0,0,1]
+      -
+        name: passage_top
+        collision_geometry:
+          type: box
+          dims: [ 10, .1, 1]
+          material: 0x0015ff
+        config:
+          position: [-3, 2, 0]
+          orientation: [0,0,0,1]
+      -	  
+        name: block_1
+        collision_geometry:
+          type: box
+          dims: [ 13, 13, 1]
+          material: 0x0015ff
+        config:
+          position: [-8.5, -8.5, 0]
+          orientation: [0,0,0,1]
+      -
+        name: block_2
+        collision_geometry:
+          type: box
+          dims: [ 13, 13, 1]
+          material: 0x0015ff
+        config:
+          position: [8.5, 8.5, 0]
+          orientation: [0,0,0,1]      
+      -
+        name: bb_top
+        collision_geometry:
+          type: box
+          dims: [ .1, 30, 1]
+          material: 0x0015ff
+        config:
+          position: [15, 0, 0]
+          orientation: [0,0,0,1]
+      -
+        name: bb_bottom
+        collision_geometry:
+          type: box
+          dims: [ .1, 30, 1]
+          material: 0x0015ff
+        config:
+          position: [-15, 0, 0]
+          orientation: [0,0,0,1]
+      -
+        name: bb_left
+        collision_geometry:
+          type: box
+          dims: [ 30, .1, 1]
+          material: 0x0015ff
+        config:
+          position: [0, -15, 0]
+          orientation: [0,0,0,1]
+      -
+        name: bb_left
+        collision_geometry:
+          type: box
+          dims: [ 30, .1, 1]
+          material: 0x0015ff
+        config:
+          position: [0, 15, 0]
+          orientation: [0,0,0,1] 

@@ -1,0 +1,84 @@
+environment:
+    type: obstacle
+    geometries:
+      -
+        name: box1
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [4,10,.2]      
+        config:
+          position: [3, 4, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: box2
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [7,1.5,.2]      
+        config:
+          position: [-4.5, 5, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: box3
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [4,1,.2]      
+        config:
+          position: [7, 4, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: box4
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [5,5,.2]      
+        config:
+          position: [-6, -5, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: box5
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [4,4,.2]      
+        config:
+          position: [7, -6.5, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: upper
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [21,.5,.2]      
+        config:
+          position: [0, 10.25, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: lower
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [21,.5,.2]      
+        config:
+          position: [0, -10.25, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: left
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [.5,21,.2]      
+        config:
+          position: [-10.25,0, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: right
+        collision_geometry: 
+          type: box
+          material: red 
+          dims: [.5,21,.2]      
+        config:
+          position: [10.25,0, 0]
+          orientation: [0, 0, 0, 1]

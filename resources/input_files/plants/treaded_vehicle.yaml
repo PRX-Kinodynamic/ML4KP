@@ -1,0 +1,14 @@
+name: "treaded_vehicle"
+path: "treaded_vehicle"
+
+# Assume simple_obstacle environment
+start_state: [0.0, 0.0, 0.0, 0.0, 0.0]
+goal_state:  [20.0, 20.0, 0.0, 0.0, 0.0]
+
+min_steps: 1
+max_steps: 50
+
+state_space_lower_bound: [-10,-10,-3.14159,-.7,-.7]
+state_space_upper_bound: [30,30,3.14159,.7,.7]
+
+vis_body: "body"

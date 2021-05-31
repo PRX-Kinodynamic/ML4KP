@@ -1,0 +1,19 @@
+planner: "Rand A*"
+
+random_seed: 231192
+simulation_step: 0.1
+
+environment: "environments/simple_obstacle.yaml"
+plant: !file "plants/two_dim_pt.yaml"
+# plant: !file "plants/treaded_vehicle.yaml"
+# plant: !file "plants/fo_treaded_vehicle.yaml"
+
+blossom: 5
+delta_prune: 0.5
+
+visualize: true
+
+checker_type: time
+checker_value: 10
+
+goal_region_radius: 0.5
