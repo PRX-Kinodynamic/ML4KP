@@ -11,6 +11,7 @@ namespace prx
 
 	extern double simulation_step;
 	class controller_t;
+	class system_controller_t;
 
 	class system_t;
 	// class system_ptr_t;
@@ -97,6 +98,7 @@ namespace prx
 	private:
 		system_t(){}
 		friend controller_t;
+		friend system_controller_t;
 
 	};
 }
