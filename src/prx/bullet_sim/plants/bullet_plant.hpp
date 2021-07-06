@@ -90,8 +90,6 @@ namespace prx
 
 	  std::string control_topo;
 	  std::string state_topo;
-
-	  space_point_t current_state;
 	};
 }
 #endif

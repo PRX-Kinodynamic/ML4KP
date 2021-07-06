@@ -36,8 +36,6 @@ namespace prx
 
 		lineArgs->m_lineWidth = 2.0;
 		lineArgs->m_colorRGB[1] = lineArgs->m_colorRGB[2] = 0;	
-
-	  	current_state = state_space->make_point();
 	}
 
 
