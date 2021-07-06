@@ -7,7 +7,7 @@ if (Bullet_FOUND)
 	message("Using system Bullet")
 else()
 	if (DEFINED ENV{BULLET_PHYSICS_PATH})
-		add_definitions(-DBULLET_PHYSICS_PATH="${BULLET_PHYSICS_PATH}")
+		add_definitions(-DBULLET_PHYSICS_PATH="$ENV{BULLET_PHYSICS_PATH}")
 		message("Using custom Bullet")
 		set(BULLET_INCLUDE_DIR "${BULLET_PHYSICS_PATH}/include/bullet")
 	else()
@@ -33,13 +33,11 @@ file(GLOB_RECURSE SRC_PRX_LIB_BULLET_SIM  ./*.cpp)
 
 add_library(${PROJECT_NAME}_bullet_sim ${SRC_PRX_LIB_BULLET_SIM})
 
-target_compile_definitions(${PROJECT_NAME}_bullet_sim PUBLIC -DBULLET_PHYSICS_PATH="${BULLET_PHYSICS_PATH}")
+target_compile_definitions(${PROJECT_NAME}_bullet_sim PUBLIC -DBULLET_PHYSICS_PATH="$ENV{BULLET_PHYSICS_PATH}")
 
 target_include_directories(${PROJECT_NAME}_bullet_sim PUBLIC "." 
 		${BULLET_INCLUDE_DIR}
 		)
-
-target_link_libraries(${PROJECT_NAME}_bullet_sim pthread ${CMAKE_DL_LIBS})
 
 target_link_libraries(${PROJECT_NAME}_bullet_sim 
 	BulletRoboticsGUI BulletExampleBrowserLib BulletRobotics 
@@ -48,6 +46,8 @@ target_link_libraries(${PROJECT_NAME}_bullet_sim
 	BulletInverseDynamics LinearMath OpenGLWindow gwen BussIK
 	Bullet3Common
 	)
+
+target_link_libraries(${PROJECT_NAME}_bullet_sim pthread ${CMAKE_DL_LIBS})
 
 if(APPLE)
 	#TODO: check for other systems
