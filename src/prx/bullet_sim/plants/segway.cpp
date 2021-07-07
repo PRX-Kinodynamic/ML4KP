@@ -74,19 +74,23 @@ namespace prx
 	simulation_step = 0.01;
         sim->getBasePositionAndOrientation(uniqueId,basePosition,baseOrientation);
         auto baseRotation = getEulerFromQuaternion(baseOrientation);
-        sid = sim->saveStateToMemory();  
-	x=0;
-	y=0;
-	z=0;
-	r=0;
-	p=0;
-	yaw=0;
-	dx=0;
-	dy=0;
-	dz=0;
-	dr=0;
-	dp=0;
-	dyaw=0;
+        btVector3 baseVel, baseAngVel;
+				sim->getBaseVelocity(uniqueId, baseVel, baseAngVel);
+				sid = sim->saveStateToMemory();
+				
+				x = basePosition[0];
+				y = basePosition[1];
+				z = basePosition[2];
+				r = baseRotation[0];
+				p = baseRotation[1];
+				yaw = baseRotation[2];
+				dx = baseVel[0];
+				dy = baseVel[1];
+				dz = baseVel[2];
+				dr = baseAngVel[0];
+				dp = baseAngVel[1];
+				dyaw = baseAngVel[2];
+	
 	state_memory = {&x,&y,&z,&r,&p,&yaw,&dx,&dy,&dz,&dr,&dp,&dyaw,&sid};
 	state_space = new space_t("EEERRREEEEEED",state_memory,"XYZRPYdxdydzdrdpdyaId");
 	state_bounds_l.clear();//={-15,-15,,-PRX_PI,-10,-PRX_PI,0};
