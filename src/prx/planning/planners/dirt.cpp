@@ -302,7 +302,8 @@ namespace prx
 			}
 			if (eg.first != nullptr)
 			{
-				add_edge_to_tree(eg, closest_node, dir_updates, new_node_dir_radius);
+				auto node_index = add_edge_to_tree(eg, closest_node, dir_updates, new_node_dir_radius);
+				update_goal(node_index);
 				delete eg.first;
 				delete eg.second;
 			}
@@ -313,7 +314,7 @@ namespace prx
 		print_statistics();
 	}
 
-	void dirt_t::add_edge_to_tree(std::pair<plan_t*, trajectory_t*> eg,
+	node_index_t dirt_t::add_edge_to_tree(std::pair<plan_t*, trajectory_t*> eg,
 		dirt_node_t* closest_node,
 		std::vector<dirt_node_t*> dir_updates,
 		double new_node_dir_radius
@@ -378,7 +379,7 @@ namespace prx
 		}
 		metric->add_node(new_tree_node.get());
 		new_tree_node->bridge = false;
-		update_goal(node_index);
+		return node_index;
 	}
 
 	void dirt_t::update_goal(node_index_t node_index)

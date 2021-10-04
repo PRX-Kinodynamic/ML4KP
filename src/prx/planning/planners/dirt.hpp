@@ -124,7 +124,7 @@ namespace prx
 		bool child_extension;
 		node_index_t previous_child;
 
-		void add_edge_to_tree(std::pair<plan_t*, trajectory_t*> eg,
+		node_index_t add_edge_to_tree(std::pair<plan_t*, trajectory_t*> eg,
 		dirt_node_t* closest_node,
 		std::vector<dirt_node_t*> dir_updates,
 		double new_node_dir_radius
