@@ -150,7 +150,7 @@ namespace prx
 		virtual std::vector<double> get_statistics() override;
 	protected:
 
-		virtual void update_goal(node_index_t node_index);
+		virtual void update_goal(node_index_t node_index, condition_check_t* condition);
 
 		virtual void _link_and_setup_spec(planner_specification_t* spec) override;
 		virtual bool _preprocess() override;

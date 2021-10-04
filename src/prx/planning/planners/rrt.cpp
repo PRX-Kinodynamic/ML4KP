@@ -107,7 +107,7 @@ namespace prx
 				new_tree_node->cost_to_come = closest_node->cost_to_come + new_edge->edge_cost;
 
 				new_tree_node -> duration = new_duration;
-				update_goal(node_index);
+				update_goal(node_index,condition);
 			}
 			iteration_count++;
 		}
@@ -211,7 +211,7 @@ namespace prx
 
 	}
 
-	void rrt_t::update_goal(node_index_t node_index)
+	void rrt_t::update_goal(node_index_t node_index, condition_check_t* condition)
 	{
 		auto new_tree_node = tree.get_vertex_as<rrt_node_t>(node_index);
 		// if(distance_function(rrt_query->goal_state,new_tree_node->point)<rrt_query->goal_region_radius)

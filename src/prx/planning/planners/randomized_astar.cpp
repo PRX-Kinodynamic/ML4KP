@@ -149,7 +149,7 @@ namespace prx
 					new_tree_node->cost_to_come = closest_node->cost_to_come + new_edge->edge_cost;
 					new_tree_node->cost_to_go = end_heuristic;
 					
-					update_goal(node_index);
+					update_goal(node_index,condition);
 					metric->add_node(new_tree_node.get());
 
 					// Don't spend time on insertion to heap if you're never gonna use it anyways.

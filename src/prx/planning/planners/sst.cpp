@@ -111,7 +111,7 @@ namespace prx
 					new_edge->traj = std::make_shared<trajectory_t>(traj);
 					new_edge->edge_cost = edge_cost;
 					new_tree_node->cost_to_come = closest_node->cost_to_come + new_edge->edge_cost;
-					update_goal(node_index);
+					update_goal(node_index,condition);
 
 					if(closest_witness->set)
 					{

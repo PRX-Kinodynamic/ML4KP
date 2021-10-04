@@ -40,6 +40,12 @@ namespace prx
 		bool check();
 
 		/**
+		 * @brief Report that a new solution has been found.
+		 * @details The planner calls this function when it has found a new solution.
+		 */
+		void report_new_solution();
+
+		/**
 		 * @brief Get the time on the timer.
 		 * @details Get the time on the timer.
 		 * 
@@ -83,6 +89,11 @@ namespace prx
 		 * @brief A counter for iterations.
 		 */
 		long unsigned iteration_counter;
+
+		/**
+		 * @brief A counter for the number of solutions found.
+		 */
+		long unsigned solution_counter;
 
 		/**
 		 * @brief The maximum time or iterations before being satisfied.
