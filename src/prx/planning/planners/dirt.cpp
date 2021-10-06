@@ -302,7 +302,8 @@ namespace prx
 			}
 			if (eg.first != nullptr)
 			{
-				add_edge_to_tree(eg, closest_node, dir_updates, new_node_dir_radius);
+				auto node_index = add_edge_to_tree(eg, closest_node, dir_updates, new_node_dir_radius);
+				update_goal(node_index,condition);
 				delete eg.first;
 				delete eg.second;
 			}
@@ -313,7 +314,7 @@ namespace prx
 		print_statistics();
 	}
 
-	void dirt_t::add_edge_to_tree(std::pair<plan_t*, trajectory_t*> eg,
+	node_index_t dirt_t::add_edge_to_tree(std::pair<plan_t*, trajectory_t*> eg,
 		dirt_node_t* closest_node,
 		std::vector<dirt_node_t*> dir_updates,
 		double new_node_dir_radius
@@ -378,10 +379,10 @@ namespace prx
 		}
 		metric->add_node(new_tree_node.get());
 		new_tree_node->bridge = false;
-		update_goal(node_index);
+		return node_index;
 	}
 
-	void dirt_t::update_goal(node_index_t node_index)
+	void dirt_t::update_goal(node_index_t node_index, condition_check_t* condition)
 	{
 		auto new_tree_node = tree.get_vertex_as<dirt_node_t>(node_index);
 		// if(distance_function(dirt_query->goal_state,new_tree_node->point)<dirt_query->goal_region_radius)
@@ -398,6 +399,7 @@ namespace prx
 				std::cout<< " time:" << current_solution_time;
 				std::cout<< " iter:" << current_solution_iters;
 				std::cout<< " nodes:" << metric->get_nr_nodes() <<std::endl;
+				condition->report_new_solution();
 				bnb(start_vertex,current_solution);
 			}
 		}

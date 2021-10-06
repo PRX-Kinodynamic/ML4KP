@@ -95,7 +95,7 @@ namespace prx
 
 	protected:
 
-		virtual void update_goal(node_index_t node_index) override;
+		virtual void update_goal(node_index_t node_index, condition_check_t* condition) override;
 
 		virtual void _link_and_setup_spec(planner_specification_t* spec) override;
 		virtual bool _preprocess() override;
@@ -124,7 +124,7 @@ namespace prx
 		bool child_extension;
 		node_index_t previous_child;
 
-		void add_edge_to_tree(std::pair<plan_t*, trajectory_t*> eg,
+		node_index_t add_edge_to_tree(std::pair<plan_t*, trajectory_t*> eg,
 		dirt_node_t* closest_node,
 		std::vector<dirt_node_t*> dir_updates,
 		double new_node_dir_radius
